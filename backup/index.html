@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowRep — Missing Layer for your YouTube Fitness</title>
+  <meta name="description"
+    content="Plan. Play. Progress. Turn YouTube's infinite workout library into a structured, trackable fitness routine — automatically.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 32 32" width="28" height="28" fill="none">
+          <path d="M6 8 Q16 4 26 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
+          <path d="M6 14 Q16 10 26 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
+          <path d="M6 20 Q16 16 26 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
+          <path d="M6 26 Q16 22 26 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
+        </svg>
+        <span class="logo-text">FLOWREP</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" class="nav-link">Home</a></li>
+        <li><a href="#" class="nav-link">Features</a></li>
+        <li><a href="#" class="nav-link">Pricing</a></li>
+        <li><a href="#" class="nav-link">Resources</a></li>
+        <li><a href="#" class="nav-link">Blog</a></li>
+      </ul>
+
+      <div class="nav-actions" id="nav-actions">
+        <a href="#" class="nav-login" id="nav-login">Login</a>
+        <a href="#" class="nav-cta" id="nav-cta">Get started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="assets/hero-bg.png" alt="" class="hero-bg-img">
+    </div>
+
+    <div class="hero-content">
+      <!-- Badge -->
+      <div class="hero-badge" id="hero-badge">
+        <span class="badge-dot"></span>
+        NOW IN PUBLIC BETA
+      </div>
+
+      <!-- Heading -->
+      <h1 class="hero-heading" id="hero-heading">
+        Missing Layer for your<br>
+        <span class="hero-heading-yt">
+          <svg class="yt-icon" viewBox="0 0 28 20" width="28" height="20">
+            <rect rx="4" ry="4" width="28" height="20" fill="#FF0000" />
+            <polygon points="11,5 11,15 20,10" fill="#fff" />
+          </svg>
+          Youtube
+        </span> Fitness
+      </h1>
+
+      <!-- Subtext -->
+      <p class="hero-subtext" id="hero-subtext">
+        Plan. Play. Progress. Turn YouTube's infinite workout library into a structured,<br>
+        trackable fitness routine — automatically.
+      </p>
+
+      <!-- CTA Row -->
+      <div class="hero-cta-row" id="hero-cta-row">
+        <a href="#" class="btn-primary" id="btn-start">
+          Start free today
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="#" class="btn-demo" id="btn-demo">
+          <svg class="play-icon" viewBox="0 0 24 24" width="22" height="22">
+            <circle cx="12" cy="12" r="11" fill="#FF0000" />
+            <polygon points="10,7 10,17 17,12" fill="#fff" />
+          </svg>
+          Watch 90-sec demo
+        </a>
+      </div>
+
+      <!-- Social Proof -->
+      <div class="hero-social-proof" id="hero-social-proof">
+        <div class="avatar-stack">
+          <div class="avatar" style="background: #4A90D9;"></div>
+          <div class="avatar" style="background: #E8A838;"></div>
+        </div>
+        <p class="social-text">
+          5,000+ <span class="social-highlight">FITNESS ENTHUSIASTS</span> ALREADY ON BOARD
+        </p>
+      </div>
+    </div>
+
+    <!-- Feature Pills with Connection Lines -->
+    <div class="pills-network" id="pills-network">
+      <!-- SVG Connection Lines -->
+      <svg class="connection-lines" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <filter id="whiteGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- Top Left: 1 CLICK SAVE -->
+        <path class="conn-line" d="M200,105 L365,270 Q375,280 375,290 L375,340" />
+        <g>
+          <animateMotion dur="2.8s" repeatCount="indefinite" path="M200,105 L365,270 Q375,280 375,290 L375,340" />
+          <rect class="conn-dot" width="6" height="6" x="-3" y="-3" transform="rotate(45)" />
+        </g>
+        <rect class="conn-dot" width="4" height="4" x="198" y="103" transform="rotate(45 200 105)" />
+        <rect class="conn-dot" width="4" height="4" x="373" y="278" transform="rotate(45 375 280)" />
+
+        <!-- Center: YOUTUBE VIDEOS -->
+        <path class="conn-line" d="M400,55 L400,340" />
+        <g>
+          <animateMotion dur="3.5s" repeatCount="indefinite" path="M400,55 L400,340" />
+          <rect class="conn-dot" width="6" height="6" x="-3" y="-3" transform="rotate(45)" />
+        </g>
+        <rect class="conn-dot" width="4" height="4" x="398" y="53" transform="rotate(45 400 55)" />
+
+        <!-- Top Right: WEEKLY PLANNER -->
+        <path class="conn-line" d="M600,105 L435,270 Q425,280 425,290 L425,340" />
+        <g>
+          <animateMotion dur="3.1s" repeatCount="indefinite" path="M600,105 L435,270 Q425,280 425,290 L425,340" />
+          <rect class="conn-dot" width="6" height="6" x="-3" y="-3" transform="rotate(45)" />
+        </g>
+        <rect class="conn-dot" width="4" height="4" x="598" y="103" transform="rotate(45 600 105)" />
+        <rect class="conn-dot" width="4" height="4" x="423" y="278" transform="rotate(45 425 280)" />
+
+        <!-- Bottom Left: PROGRESS TRACKING -->
+        <path class="conn-line" d="M180,210 L250,210 Q260,210 267,217 L343,293 Q350,300 350,310 L350,340" />
+        <g>
+          <animateMotion dur="3.2s" repeatCount="indefinite"
+            path="M180,210 L250,210 Q260,210 267,217 L343,293 Q350,300 350,310 L350,340" />
+          <rect class="conn-dot" width="6" height="6" x="-3" y="-3" transform="rotate(45)" />
+        </g>
+        <rect class="conn-dot" width="4" height="4" x="178" y="208" transform="rotate(45 180 210)" />
+        <rect class="conn-dot" width="4" height="4" x="258" y="208" transform="rotate(45 260 210)" />
+        <rect class="conn-dot" width="4" height="4" x="348" y="298" transform="rotate(45 350 300)" />
+
+        <!-- Bottom Right: CREATOR PROGRAM -->
+        <path class="conn-line" d="M620,210 L550,210 Q540,210 533,217 L457,293 Q450,300 450,310 L450,340" />
+        <g>
+          <animateMotion dur="2.9s" repeatCount="indefinite"
+            path="M620,210 L550,210 Q540,210 533,217 L457,293 Q450,300 450,310 L450,340" />
+          <rect class="conn-dot" width="6" height="6" x="-3" y="-3" transform="rotate(45)" />
+        </g>
+        <rect class="conn-dot" width="4" height="4" x="618" y="208" transform="rotate(45 620 210)" />
+        <rect class="conn-dot" width="4" height="4" x="538" y="208" transform="rotate(45 540 210)" />
+        <rect class="conn-dot" width="4" height="4" x="448" y="298" transform="rotate(45 450 300)" />
+      </svg>
+
+      <!-- Pills positioned around -->
+      <div class="pill pill-yt" id="pill-youtube">
+        <svg width="16" height="12" viewBox="0 0 28 20">
+          <rect rx="3" ry="3" width="28" height="20" fill="#FF0000" />
+          <polygon points="11,5 11,15 20,10" fill="#fff" />
+        </svg>
+        YOUTUBE VIDEOS
+      </div>
+
+      <div class="pill pill-save" id="pill-save">
+        <svg width="14" height="16" viewBox="0 0 14 18" fill="none">
+          <path d="M1 1h12v16l-6-4-6 4V1z" stroke="#222" stroke-width="1.5" fill="none" />
+        </svg>
+        1 CLICK SAVE
+      </div>
+
+      <div class="pill pill-planner" id="pill-planner">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <rect x="1" y="2" width="14" height="13" rx="2" stroke="#222" stroke-width="1.5" fill="none" />
+          <path d="M1 6h14" stroke="#222" stroke-width="1.5" />
+          <path d="M5 1v3M11 1v3" stroke="#222" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+        WEEKLY PLANNER
+      </div>
+
+      <div class="pill pill-progress" id="pill-progress">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <rect x="1" y="1" width="14" height="14" rx="2" stroke="#222" stroke-width="1.5" fill="none" />
+          <path d="M4 10l3-3 2 2 3-4" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        PROGRESS TRACKING
+      </div>
+
+      <div class="pill pill-creator" id="pill-creator">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="5" r="3" stroke="#222" stroke-width="1.5" fill="none" />
+          <path d="M2 15c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#222" stroke-width="1.5" fill="none"
+            stroke-linecap="round" />
+        </svg>
+        CREATOR PROGRAM
+      </div>
+
+      <!-- Bottom Logo -->
+      <div class="hero-bottom-logo" id="hero-bottom-logo">
+        <img src="assets/logo.jpg" alt="FlowRep Logo" class="bottom-logo-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES SECTION ========== -->
+  <section class="features" id="features">
+    <div class="features-container">
+      <!-- Section Header -->
+      <div class="features-header">
+        <span class="features-label">SYSTEM CAPABILITIES</span>
+        <h2 class="features-title">The FlowRep Ecosystem</h2>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="bento-grid">
+
+        <!-- Card 1: 1-Click Metadata Sync (large left) -->
+        <div class="bento-card bento-card-lg" id="card-metadata">
+          <div class="bento-card-inner">
+            <div class="bento-card-text">
+              <div class="bento-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <circle cx="10" cy="10" r="9" stroke="#4caf50" stroke-width="1.5" fill="none" />
+                  <path d="M6 10.5l2.5 2.5L14 7.5" stroke="#4caf50" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3 class="bento-card-title">1-Click Metadata Sync</h3>
+              <p class="bento-card-desc">Instantly parse workout duration, muscle focus, and equipment requirements from
+                any YouTube URL. No manual entry required.</p>
+              <a href="#" class="bento-learn-more">
+                Learn more
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+            <div class="bento-card-visual bento-visual-plant">
+              <div class="plant-circle-outer">
+                <img src="assets/plant-plate.png" alt="Plant on plate" class="plant-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Weekly Architect (accent card) -->
+        <div class="bento-card bento-card-accent" id="card-weekly">
+          <div class="bento-icon bento-icon-accent">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <rect x="2" y="3" width="16" height="15" rx="2" stroke="#fff" stroke-width="1.5" fill="none" />
+              <path d="M2 7h16" stroke="#fff" stroke-width="1.5" />
+              <path d="M6 1v4M14 1v4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+              <rect x="5" y="10" width="3" height="2" rx="0.5" fill="#fff" opacity="0.6" />
+              <rect x="5" y="13" width="3" height="2" rx="0.5" fill="#fff" opacity="0.6" />
+              <rect x="9" y="10" width="3" height="2" rx="0.5" fill="#fff" opacity="0.6" />
+            </svg>
+          </div>
+          <h3 class="bento-card-title">Weekly Architect</h3>
+          <p class="bento-card-desc">Drag and drop sessions from your favorite creators into a professional-grade
+            training calendar.</p>
+          <div class="calendar-preview">
+            <div class="calendar-entry">
+              <span class="calendar-day">TUESDAY</span>
+              <span class="calendar-badge">HIIT</span>
+            </div>
+            <div class="calendar-workout">Upper Body Shred</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Omni-Channel Metrics (bottom left) -->
+        <div class="bento-card bento-card-metrics" id="card-metrics">
+          <h3 class="bento-card-title">Omni-Channel Metrics</h3>
+          <p class="bento-card-desc">Track volume and intensity across all your subscribed fitness channels in a unified
+            dashboard.</p>
+          <div class="metrics-chart">
+            <div class="bar-group">
+              <div class="bar" style="height: 40px; background: #c8d8c0;"></div>
+              <div class="bar-line"></div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 55px; background: #a3bc90;"></div>
+              <div class="bar-line"></div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 50px; background: #8ea87a;"></div>
+              <div class="bar-line"></div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 80px; background: #4caf50;"></div>
+              <div class="bar-line"></div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 30px; background: #d4ddd0;"></div>
+              <div class="bar-line"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Advanced Discovery (bottom right) -->
+        <div class="bento-card bento-card-discovery" id="card-discovery">
+          <div class="bento-discovery-content">
+            <div class="bento-discovery-text">
+              <h3 class="bento-card-title">Advanced Discovery</h3>
+              <p class="bento-card-desc">Filter by equipment availability, specific muscle groups, or precise session
+                duration.</p>
+              <div class="discovery-tags">
+                <span class="tag">Kettlebell</span>
+                <span class="tag">15-30 Min</span>
+                <span class="tag">Posterior Chain</span>
+              </div>
+            </div>
+            <div class="discovery-visual">
+              <div class="filter-bar" style="width: 100%;"></div>
+              <div class="filter-bar" style="width: 85%;"></div>
+              <div class="filter-bar" style="width: 70%;"></div>
+              <div class="filter-bar" style="width: 60%;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="workflow" id="workflow">
+    <!-- Decorative background blobs -->
+    <div class="wf-blob wf-blob-1"></div>
+    <div class="wf-blob wf-blob-2"></div>
+    <div class="wf-blob wf-blob-3"></div>
+
+    <div class="workflow-container">
+      <!-- Section Header -->
+      <div class="workflow-header">
+        <span class="workflow-label">THE WORKFLOW</span>
+        <h2 class="workflow-title">Elevate your routine<br>in seconds</h2>
+        <p class="workflow-subtitle">Stop juggling tabs and screenshots. FlowRep turns inspiration into execution with a
+          seamless five-step flow.</p>
+      </div>
+
+      <!-- Vertical Timeline -->
+      <div class="wf-timeline" id="wf-timeline">
+
+        <!-- Central spine line -->
+        <div class="wf-spine"></div>
+
+        <!-- SVG Curved Connectors -->
+        <svg class="wf-curves" viewBox="0 0 600 1500" preserveAspectRatio="xMidYMid meet" fill="none">
+          <defs>
+            <linearGradient id="curveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#4caf50" stop-opacity="0.7" />
+              <stop offset="100%" stop-color="#2e7d32" stop-opacity="0.4" />
+            </linearGradient>
+            <filter id="curveGlow">
+              <feGaussianBlur stdDeviation="2.5" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <!-- Curve 01 → 02 (left to right) -->
+          <path class="wf-curve-path" id="curve-1" d="M180,120 C180,180 300,180 300,240 C300,300 420,300 420,340" />
+          <!-- Curve 02 → 03 (right to center) -->
+          <path class="wf-curve-path" id="curve-2" d="M420,520 C420,580 300,580 300,640 C300,700 180,700 180,740" />
+          <!-- Curve 03 → 04 (left to right) -->
+          <path class="wf-curve-path" id="curve-3" d="M180,920 C180,980 300,980 300,1040 C300,1100 420,1100 420,1140" />
+          <!-- Curve 04 → 05 (right to center) -->
+          <path class="wf-curve-path" id="curve-4" d="M420,1320 C420,1370 300,1370 300,1420" />
+        </svg>
+
+        <!-- Step 01 — Install Extension (LEFT) -->
+        <div class="wf-step wf-step-left" id="wf-step-1">
+          <div class="wf-card wf-card-light">
+            <div class="wf-badge">01</div>
+            <div class="wf-icon-wrap wf-icon-light">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="2" y="2" width="16" height="16" rx="3" stroke="#2e7d32" stroke-width="1.5" fill="none" />
+                <path d="M7 10h6M10 7v6" stroke="#2e7d32" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="wf-card-title">Install Extension</h3>
+            <p class="wf-card-desc">One-click install to your browser. Seamlessly integrates with your favorite
+              platforms.</p>
+            <div class="wf-progress">
+              <span class="wf-bar wf-bar-dark"></span>
+              <span class="wf-bar wf-bar-accent"></span>
+              <span class="wf-bar wf-bar-muted"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 02 — Save Workout (RIGHT) -->
+        <div class="wf-step wf-step-right" id="wf-step-2">
+          <div class="wf-card wf-card-dark">
+            <div class="wf-badge wf-badge-light">02</div>
+            <div class="wf-icon-wrap wf-icon-dark">
+              <svg width="18" height="20" viewBox="0 0 14 18" fill="none">
+                <path d="M1 1h12v16l-6-4-6 4V1z" stroke="#81c784" stroke-width="1.5" fill="none" />
+              </svg>
+            </div>
+            <h3 class="wf-card-title">Save Workout</h3>
+            <p class="wf-card-desc">Clip any YouTube or Instagram workout directly to your library with zero friction.
+            </p>
+            <div class="wf-progress">
+              <span class="wf-bar wf-bar-accent"></span>
+              <span class="wf-bar wf-bar-white"></span>
+              <span class="wf-bar wf-bar-white"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 03 — Plan Week (LEFT) -->
+        <div class="wf-step wf-step-left" id="wf-step-3">
+          <div class="wf-card wf-card-light">
+            <div class="wf-badge">03</div>
+            <div class="wf-icon-wrap wf-icon-light">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="2" y="3" width="16" height="15" rx="2" stroke="#2e7d32" stroke-width="1.5" fill="none" />
+                <path d="M2 7h16" stroke="#2e7d32" stroke-width="1.5" />
+                <path d="M6 1v4M14 1v4" stroke="#2e7d32" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="wf-card-title">Plan Week</h3>
+            <p class="wf-card-desc">Drag and drop sessions into your personalized training calendar for total clarity.
+            </p>
+            <div class="wf-progress">
+              <span class="wf-bar wf-bar-muted"></span>
+              <span class="wf-bar wf-bar-accent"></span>
+              <span class="wf-bar wf-bar-dark"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 04 — Track Progress (RIGHT) -->
+        <div class="wf-step wf-step-right" id="wf-step-4">
+          <div class="wf-card wf-card-dark">
+            <div class="wf-badge wf-badge-light">04</div>
+            <div class="wf-icon-wrap wf-icon-dark">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="2" y="2" width="16" height="16" rx="2" stroke="#81c784" stroke-width="1.5" fill="none" />
+                <path d="M5 14l3-4 3 3 4-6" stroke="#81c784" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="wf-card-title">Track Progress</h3>
+            <p class="wf-card-desc">Watch your performance peaks with automated, high-fidelity data visualization.</p>
+            <div class="wf-mini-chart">
+              <div class="wf-mini-bar" style="height: 30%;"></div>
+              <div class="wf-mini-bar" style="height: 50%;"></div>
+              <div class="wf-mini-bar" style="height: 40%;"></div>
+              <div class="wf-mini-bar wf-mini-bar-active" style="height: 80%;"></div>
+              <div class="wf-mini-bar" style="height: 60%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 05 — Share Results (CENTER — new card) -->
+        <div class="wf-step wf-step-center" id="wf-step-5">
+          <div class="wf-card wf-card-accent-glow">
+            <div class="wf-badge wf-badge-gold">05</div>
+            <div class="wf-icon-wrap wf-icon-accent">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="8" stroke="#2e7d32" stroke-width="1.5" fill="none" />
+                <path d="M7 10l2 2 4-4" stroke="#2e7d32" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="wf-card-title">Share & Inspire</h3>
+            <p class="wf-card-desc">Export your training splits and achievements. Build your fitness community on
+              FlowRep.</p>
+            <div class="wf-progress">
+              <span class="wf-bar wf-bar-accent"></span>
+              <span class="wf-bar wf-bar-accent"></span>
+              <span class="wf-bar wf-bar-dark"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS SECTION (Wall of Love) ========== -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials-container">
+      <!-- Section Header -->
+      <div class="testimonials-header">
+        <h2 class="testimonials-title">Wall of Love</h2>
+        <p class="testimonials-subtitle">Real check-ins from the community. Updated in real-time by athletes around the
+          globe.</p>
+      </div>
+
+      <!-- Testimonials Grid (Masonry Style) -->
+      <div class="testimonials-grid">
+
+        <!-- Card 1: @jake_lifts (Slide in from left) -->
+        <div class="testimonial-card ent-left" id="test-1">
+          <div class="card-user">
+            <div class="user-avatar" style="background-color: #c8e6c9;"></div>
+            <div class="user-info">
+              <span class="user-handle">@jake_lifts <span class="verified-badge"></span></span>
+              <span class="user-timestamp" data-hours="2">2H AGO</span>
+            </div>
+            <div class="user-rating">
+              <span class="star-rating">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                  class="star">★</span><span class="star">★</span>
+              </span>
+            </div>
+          </div>
+          <p class="card-quote">The habit tracking feature alone is worth the sub. Haven't missed a leg day in 4 months.
+          </p>
+        </div>
+
+        <!-- Card 2: Men's Health (Editorial - Scale in, fades last) -->
+        <div class="testimonial-card card-editorial ent-scale" id="test-2">
+          <p class="editorial-quote">"FlowRep is the silent partner in thousands of transformations."</p>
+          <span class="editorial-source">— MEN'S HEALTH</span>
+        </div>
+
+        <!-- Card 3: @nick_lifts (Slide in from right) -->
+        <div class="testimonial-card ent-right" id="test-3">
+          <div class="card-user">
+            <div class="user-avatar" style="background-color: #f5f5f5;"></div>
+            <div class="user-info">
+              <span class="user-handle">@nick_lifts <span class="verified-badge"></span></span>
+              <span class="user-timestamp" data-hours="48">2D AGO</span>
+            </div>
+          </div>
+          <p class="card-quote">The 1-click YouTube sync is a lifesaver. No more manually typing out exercises while I'm
+            in the middle of a set.</p>
+        </div>
+
+        <!-- Card 4: @miaruns (Dark Green - Slide up, glow pulse) -->
+        <div class="testimonial-card card-dark-green ent-up" id="test-4">
+          <div class="card-user">
+            <div class="user-avatar" style="background-color: rgba(255,255,255,0.2);"></div>
+            <div class="user-info">
+              <span class="user-handle">@miaruns <span class="verified-badge-white"></span></span>
+              <span class="user-timestamp" style="color: rgba(255,255,255,0.6);" data-hours="5">5H AGO</span>
+            </div>
+          </div>
+          <p class="card-quote">Filtering workouts by duration is so smart. Now I can find the perfect 20-min session
+            for busy mornings on YouTube.</p>
+        </div>
+
+        <!-- Card 5: @coach_ben (Fades in center) -->
+        <div class="testimonial-card ent-fade" id="test-5">
+          <div class="card-user">
+            <div class="user-avatar" style="background-color: #e0e0e0;"></div>
+            <div class="user-info">
+              <span class="user-handle">@coach_ben <span class="verified-badge"></span></span>
+              <span class="user-timestamp" data-hours="24">1D AGO</span>
+            </div>
+          </div>
+          <p class="card-quote">I recommend FlowRep to all my clients. The shared training plans make organizing their
+            YouTube routines so much easier.</p>
+        </div>
+
+        <!-- Card 6: Satisfaction Stat (Slide up, count 0→9.2) -->
+        <div class="testimonial-card card-stat-green ent-up" id="test-6">
+          <h3 class="stat-value" data-target="9.2">0</h3>
+          <p class="stat-description">AVERAGE ATHLETE SATISFACTION</p>
+        </div>
+
+        <!-- Card 7: @the_real_kyle (Slide up) -->
+        <div class="testimonial-card ent-up" id="test-7">
+          <div class="card-user">
+            <div class="user-avatar" style="background-color: #eeeeee;"></div>
+            <div class="user-info">
+              <span class="user-handle">@the_real_kyle <span class="verified-badge"></span></span>
+              <span class="user-timestamp" data-hours="8">8H AGO</span>
+            </div>
+          </div>
+          <p class="card-quote">Finally a platform that makes YouTube fitness feel organized. Clean UI, even better
+            performance than keeping 100 tabs open.</p>
+        </div>
+
+        <!-- Card 8: App Store (Editorial/Stars - Slide up) -->
+        <div class="testimonial-card ent-up" id="test-8">
+          <div class="card-rating-top">
+            <span class="star-rating">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                class="star">★</span><span class="star">★</span>
+            </span>
+          </div>
+          <p class="card-quote italic-quote">"Literally the best $5.99/mo I spend. Better than a personal trainer for
+            organizing my routine."</p>
+          <span class="card-footer-label">REVIEW ON X</span>
+        </div>
+
+        <!-- Card 9: @fitness_freak_99 (Slide up) -->
+        <div class="testimonial-card ent-up" id="test-9">
+          <div class="card-user">
+            <div class="user-avatar" style="background-color: #bdbdbd;"></div>
+            <div class="user-info">
+              <span class="user-handle">@fitness_freak_99 <span class="verified-badge"></span></span>
+              <span class="user-timestamp" data-hours="72">3D AGO</span>
+            </div>
+          </div>
+          <p class="card-quote">FlowRep combined my workout history and YouTube planner perfectly. Switched from a mess
+            of notes and bookmarks.</p>
+        </div>
+
+        <!-- Card 10: @amanda_v (Slide up from bottom) -->
+        <div class="testimonial-card ent-up" id="test-10">
+          <div class="card-user">
+            <div class="user-avatar" style="background-color: #c8e6c9;"></div>
+            <div class="user-info">
+              <span class="user-handle">@amanda_v <span class="verified-badge"></span></span>
+              <span class="user-timestamp" data-hours="24">1D AGO</span>
+            </div>
+          </div>
+          <p class="card-quote">The AI coaching suggestions are scary good. It knew I needed a deload before I did.</p>
+        </div>
+
+        <!-- Card 11: @sara_active (Fades in center) -->
+        <div class="testimonial-card ent-fade" id="test-11">
+          <div class="card-user">
+            <div class="user-avatar" style="background-color: #a5d6a7;"></div>
+            <div class="user-info">
+              <span class="user-handle">@sara_active <span class="verified-badge"></span></span>
+              <span class="user-timestamp" data-hours="48">2D AGO</span>
+            </div>
+          </div>
+          <p class="card-quote">Joined for the tracking, stayed for the community. The local meetups are amazing.</p>
+        </div>
+
+        <!-- Card 12: @leo_runs (Slide in from right) -->
+        <div class="testimonial-card ent-right" id="test-12">
+          <div class="card-user">
+            <div class="user-avatar" style="background-color: #c8e6c9;"></div>
+            <div class="user-info">
+              <span class="user-handle">@leo_runs <span class="verified-badge"></span></span>
+              <span class="user-timestamp" data-hours="72">3D AGO</span>
+            </div>
+          </div>
+          <p class="card-quote">PR'd my 5k today using the pacing tools. 19:42! FlowRep actually works.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING SECTION ========== -->
+  <section class="pricing" id="pricing">
+    <div class="pricing-container">
+      <div class="pricing-header">
+        <span class="pricing-badge">TRANSPARENT PRICING</span>
+        <h2 class="pricing-title">Choose your power level</h2>
+        <p class="pricing-subtitle">Fuel your performance with plans built for every stage of your journey.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- FREE Plan -->
+        <div class="pricing-card" id="pricing-free">
+          <div class="card-type">
+            <h3>FREE</h3>
+            <div class="type-icon icon-light">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 14 3-11 5 10H8l3 11z" />
+              </svg>
+            </div>
+          </div>
+          <p class="plan-desc">Essential tools for beginners.</p>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">0</span>
+            <span class="period">/mo</span>
+          </div>
+          <ul class="plan-features">
+            <li class="feature-included">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Save up to 10 workouts
+            </li>
+            <li class="feature-included">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Basic performance analytics
+            </li>
+            <li class="feature-disabled">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+              </svg>
+              Pro Weekly Planner
+            </li>
+          </ul>
+          <a href="#" class="btn-pricing-outline">Get Started</a>
+        </div>
+
+        <!-- PRO Plan (Most Popular) -->
+        <div class="pricing-card is-popular" id="pricing-pro">
+          <div class="popular-tag">MOST POPULAR</div>
+          <div class="card-type">
+            <h3>PRO</h3>
+            <div class="type-icon icon-flame">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
+              </svg>
+            </div>
+          </div>
+          <p class="plan-desc">Unleash your full potential.</p>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">5.99</span>
+            <span class="period">/mo</span>
+          </div>
+          <ul class="plan-features">
+            <li class="feature-included">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Unlimited saved workouts
+            </li>
+            <li class="feature-included">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Advanced Weekly Planner
+            </li>
+            <li class="feature-included">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Real-time performance dashboard
+            </li>
+            <li class="feature-included">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Priority 24/7 expert support
+            </li>
+          </ul>
+          <a href="#" class="btn-pricing-primary">Start 7-Day Free Trial</a>
+        </div>
+
+        <!-- CREATOR Plan -->
+        <div class="pricing-card" id="pricing-creator">
+          <div class="card-type">
+            <h3>CREATOR</h3>
+            <div class="type-icon icon-gem">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 3h12l4 6-10 12L2 9z" />
+                <path d="M11 3 8 9l4 12 4-12-3-6" />
+                <path d="M2 9h20" />
+              </svg>
+            </div>
+          </div>
+          <p class="plan-desc">Monetize your training routines.</p>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">12.99</span>
+            <span class="period">/mo</span>
+          </div>
+          <ul class="plan-features">
+            <li class="feature-included">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Everything in Pro plan
+            </li>
+            <li class="feature-included">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Monetization & Adsense tools
+            </li>
+            <li class="feature-included">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Creator analytics API access
+            </li>
+            <li class="feature-included">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Custom white-label pages
+            </li>
+          </ul>
+          <a href="#" class="btn-pricing-outline">Join Creator Hub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll-triggered animations -->
+  <script>
+    // ===== Animated number counter =====
+    function animateCounter(el, target) {
+      const duration = 2000;
+      const startTime = performance.now();
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(target * eased).toLocaleString();
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    // ===== Stats observer =====
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.stat-card').forEach((card, i) => {
+            setTimeout(() => {
+              card.classList.add('stat-visible');
+              const numEl = card.querySelector('.stat-number');
+              animateCounter(numEl, parseInt(numEl.dataset.target));
+            }, i * 200);
+          });
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    const statsGrid = document.querySelector('.stats-grid');
+    if (statsGrid) statsObserver.observe(statsGrid);
+
+    // ===== Workflow: scroll-draw curves + card reveal =====
+    (function () {
+      const paths = document.querySelectorAll('.wf-curve-path');
+      const steps = document.querySelectorAll('.wf-step');
+
+      // Initialize path lengths for draw animation
+      paths.forEach(path => {
+        const len = path.getTotalLength();
+        path.style.strokeDasharray = '10 7';
+        // Store the total length for proportional animation
+        path.dataset.totalLength = len;
+        // Start fully hidden (offset = length hides the path)
+        path.style.strokeDashoffset = len;
+      });
+
+      // Observe each step for card reveal
+      const stepObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('wf-visible');
+            stepObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      steps.forEach(step => stepObserver.observe(step));
+
+      // Observe each curve for draw-on-scroll
+      const curveObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const path = entry.target;
+            // Animate the curve drawing in
+            path.style.transition = 'stroke-dashoffset 1.2s ease-out';
+            path.style.strokeDashoffset = '0';
+            curveObserver.unobserve(path);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+
+      paths.forEach(path => curveObserver.observe(path));
+    })();
+
+    // ===== Features Bento Grid Observer =====
+    const featuresObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          featuresObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    const featuresSection = document.querySelector('.features');
+    if (featuresSection) featuresObserver.observe(featuresSection);
+
+    // ===== Advanced Testimonials Logic =====
+    function animateDecimal(el, target, duration = 1500) {
+      let start = 0;
+      const step = (timestamp) => {
+        if (!start) start = timestamp;
+        const progress = Math.min((timestamp - start) / duration, 1);
+        el.innerText = (progress * target).toFixed(1);
+        if (progress < 1) window.requestAnimationFrame(step);
+      };
+      window.requestAnimationFrame(step);
+    }
+
+    const testimonialsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          const cards = entry.target.querySelectorAll('.testimonial-card');
+
+          cards.forEach((card, i) => {
+            // 1. Entrance Stagger
+            setTimeout(() => {
+              card.classList.add('test-visible');
+
+              // 2. Special Card Behaviors
+              if (card.id === 'test-6') {
+                const valEl = card.querySelector('.stat-value');
+                animateDecimal(valEl, parseFloat(valEl.dataset.target));
+              }
+              if (card.id === 'test-4') {
+                card.classList.add('mia-glow');
+              }
+
+              // 3. Star Stagger
+              const stars = card.querySelectorAll('.star');
+              stars.forEach((star, si) => {
+                setTimeout(() => star.style.opacity = '1', si * 100);
+              });
+            }, i * 80); // 0.08s stagger
+          });
+          testimonialsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const testimonialsGrid = document.querySelector('.testimonials-grid');
+    const testimonialsSection = document.querySelector('.testimonials');
+    if (testimonialsSection) testimonialsObserver.observe(testimonialsSection);
+
+    // ===== Pricing Observer =====
+    const pricingObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          pricingObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    const pricingSection = document.querySelector('.pricing');
+    if (pricingSection) pricingObserver.observe(pricingSection);
+
+    // Continuous Loop: Random Pulse
+    setInterval(() => {
+      const cards = document.querySelectorAll('.testimonial-card.test-visible');
+      if (cards.length > 0) {
+        const randomCard = cards[Math.floor(Math.random() * cards.length)];
+        randomCard.classList.add('card-pulse');
+        setTimeout(() => randomCard.classList.remove('card-pulse'), 2000);
+      }
+    }, 5000); // Every 5 seconds
+
+    // Continuous Loop: Timestamps
+    setInterval(() => {
+      const stamps = document.querySelectorAll('.user-timestamp[data-hours]');
+      stamps.forEach(stamp => {
+        let hrs = parseFloat(stamp.dataset.hours);
+        // Simulate slow time passage (adding small fraction)
+        hrs += 0.01;
+        stamp.dataset.hours = hrs;
+        if (hrs < 24) {
+          stamp.innerText = Math.floor(hrs) + "H AGO";
+        } else {
+          stamp.innerText = Math.floor(hrs / 24) + "D AGO";
+        }
+      });
+    }, 10000); // Check every 10s
+  </script>
+
+</body>
+
+</html>
