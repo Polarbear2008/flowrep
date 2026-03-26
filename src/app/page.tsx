@@ -1,17 +1,42 @@
 'use client';
-import { useEffect } from 'react';
-import { FAQ } from '@/components/FAQ';
-import { CTA } from '@/components/CTA';
-import { Footer } from '@/components/Footer';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const faqData = [
+    {
+      question: "How does the YouTube extension work?",
+      answer: "Once installed, a 'Save to FlowRep' button appears directly under the video player on YouTube. Clicking it analyzes the description and video data to instantly create a trackable workout in your dashboard."
+    },
+    {
+      question: "Can I use FlowRep on my mobile phone?",
+      answer: "Yes, FlowRep is fully responsive and works beautifully on all mobile devices through your web browser."
+    },
+    {
+      question: "Is my data private and secure?",
+      answer: "Absolutely. We use industry-standard encryption and never sell your personal data to third parties."
+    },
+    {
+      question: "How do creators earn money?",
+      answer: "Creators earn through our revenue-share program based on how many users save and complete their workouts using FlowRep."
+    },
+    {
+      question: "Do I need a gym membership?",
+      answer: "Not necessarily. FlowRep works with any workout, whether at home, outdoors, or in a gym. You decide the workouts you track."
+    },
+    {
+      question: "What if I want to cancel my Pro plan?",
+      answer: "You can cancel your subscription at any time from your account settings. You will retain access until the end of your billing cycle."
+    }
+  ];
+
   useEffect(() => {
     
     // ===== Animated number counter =====
-    function animateCounter(el, target) {
+    function animateCounter(el: HTMLElement, target: number) {
       const duration = 2000;
       const startTime = performance.now();
-      function update(currentTime) {
+      function update(currentTime: number) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
@@ -28,8 +53,10 @@ export default function Home() {
           entry.target.querySelectorAll('.stat-card').forEach((card, i) => {
             setTimeout(() => {
               card.classList.add('stat-visible');
-              const numEl = card.querySelector('.stat-number');
-              animateCounter(numEl, parseInt(numEl.dataset.target));
+              const numEl = card.querySelector('.stat-number') as HTMLElement;
+              if (numEl && numEl.dataset.target) {
+                animateCounter(numEl, parseInt(numEl.dataset.target));
+              }
             }, i * 200);
           });
           statsObserver.unobserve(entry.target);
@@ -41,15 +68,15 @@ export default function Home() {
 
     // ===== Workflow: scroll-draw curves + card reveal =====
     (function () {
-      const paths = document.querySelectorAll('.wf-curve-path');
-      const steps = document.querySelectorAll('.wf-step');
+      const paths = document.querySelectorAll<SVGPathElement>('.wf-curve-path');
+      const steps = document.querySelectorAll<HTMLElement>('.wf-step');
 
       // Initialize path lengths for draw animation
       paths.forEach(path => {
-        const len = path.getTotalLength();
+        const len = path.getTotalLength().toString();
         path.style.strokeDasharray = '10 7';
         // Store the total length for proportional animation
-        path.dataset.totalLength = len;
+        path.setAttribute('data-total-length', len);
         // Start fully hidden (offset = length hides the path)
         path.style.strokeDashoffset = len;
       });
@@ -70,7 +97,7 @@ export default function Home() {
       const curveObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const path = entry.target;
+            const path = entry.target as SVGPathElement;
             // Animate the curve drawing in
             path.style.transition = 'stroke-dashoffset 1.2s ease-out';
             path.style.strokeDashoffset = '0';
@@ -96,9 +123,9 @@ export default function Home() {
     if (featuresSection) featuresObserver.observe(featuresSection);
 
     // ===== Advanced Testimonials Logic =====
-    function animateDecimal(el, target, duration = 1500) {
+    function animateDecimal(el: HTMLElement, target: number, duration = 1500) {
       let start = 0;
-      const step = (timestamp) => {
+      const step = (timestamp: number) => {
         if (!start) start = timestamp;
         const progress = Math.min((timestamp - start) / duration, 1);
         el.innerText = (progress * target).toFixed(1);
@@ -120,15 +147,17 @@ export default function Home() {
 
               // 2. Special Card Behaviors
               if (card.id === 'test-6') {
-                const valEl = card.querySelector('.stat-value');
-                animateDecimal(valEl, parseFloat(valEl.dataset.target));
+                const valEl = card.querySelector('.stat-value') as HTMLElement;
+                if (valEl && valEl.dataset.target) {
+                  animateDecimal(valEl, parseFloat(valEl.dataset.target));
+                }
               }
               if (card.id === 'test-4') {
                 card.classList.add('mia-glow');
               }
 
               // 3. Star Stagger
-              const stars = card.querySelectorAll('.star');
+              const stars = card.querySelectorAll<HTMLElement>('.star');
               stars.forEach((star, si) => {
                 setTimeout(() => star.style.opacity = '1', si * 100);
               });
@@ -168,12 +197,12 @@ export default function Home() {
 
     // Continuous Loop: Timestamps
     setInterval(() => {
-      const stamps = document.querySelectorAll('.user-timestamp[data-hours]');
+      const stamps = document.querySelectorAll<HTMLElement>('.user-timestamp[data-hours]');
       stamps.forEach(stamp => {
-        let hrs = parseFloat(stamp.dataset.hours);
+        let hrs = parseFloat(stamp.dataset.hours || '0');
         // Simulate slow time passage (adding small fraction)
         hrs += 0.01;
-        stamp.dataset.hours = hrs;
+        stamp.dataset.hours = hrs.toString();
         if (hrs < 24) {
           stamp.innerText = Math.floor(hrs) + "H AGO";
         } else {
@@ -988,11 +1017,105 @@ export default function Home() {
     </div>
   </section>
 
-  {/*  Scroll-triggered animations  */}
-  
-      <FAQ />
-      <CTA />
-      <Footer />
+  {/* ========== FAQ SECTION ========== */}
+  <section className="faq" id="faq">
+    <div className="faq-container">
+      <div className="faq-header">
+        <span className="faq-label">EVERYTHING YOU NEED TO KNOW</span>
+        <h2 className="faq-title">Frequently Asked Questions</h2>
+      </div>
+      <div className="faq-list">
+        {faqData.map((item, index) => (
+          <div 
+            key={index} 
+            className={`faq-item ${openFaq === index ? 'is-open' : ''}`}
+            onClick={() => setOpenFaq(openFaq === index ? null : index)}
+          >
+            <div className="faq-question">
+              <h3>{item.question}</h3>
+              <svg className="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+            <div className="faq-answer">
+              <p>{item.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ========== CTA SECTION ========== */}
+  <section className="cta-section" id="cta">
+    <div className="cta-container">
+      <div className="cta-card">
+        <h2 className="cta-title">Ready to organize your fitness?</h2>
+        <p className="cta-subtitle">Join 50,000+ athletes leveling up their performance every day.</p>
+        <div className="cta-actions">
+          <a href="#" className="btn-cta-primary">Get FlowRep Free</a>
+          <a href="#" className="btn-cta-secondary">Book a Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ========== FOOTER ========== */}
+  <footer className="footer">
+    <div className="footer-container">
+      <div className="footer-brand">
+        <a href="#" className="footer-logo">
+          <img src="/assets/logo.jpg" alt="FlowRep Logo" className="logo-icon" style={{ width: '24px', height: '24px', objectFit: 'contain', borderRadius: '4px' }} />
+          <span>FLOWREP</span>
+        </a>
+        <p className="footer-desc">Plan. Play. Progress. Turn YouTube's infinite library into a structured, trackable fitness routine.</p>
+        <div className="footer-socials">
+          <a href="#" aria-label="Twitter">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+        </div>
+      </div>
+      <div className="footer-links-group">
+        <div className="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Extension</a></li>
+            <li><a href="#">Creator Program</a></li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Workout Templates</a></li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div className="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} FlowRep. All rights reserved.</p>
+      <div className="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
     </>
   );
 }
